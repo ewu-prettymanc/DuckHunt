@@ -1,0 +1,55 @@
+
+1) in cheese array.cpp.   I had several warnings about the order in which my
+initilzation lists were initilizing members.  SO, I moved them around.
+The compilier wanted them in the same order in which they were declared in
+the .h file.
+
+Also saw this in ford array.cpp
+
+2) #include "image_array.h" in gravity_sprite.h
+
+3) intro.cpp and main.cpp both have a main.  So, I deleted intro.cpp
+with svn delete intro.cpp
+
+4) numerous speeeelling errors 
+
+COMPILED.....
+
+1) background is WAAAAY TOOO big.  So I shrunk back.jpg.
+
+changed the constructor of platformer to use the new width and height. 
+
+2) called base_game::draw() in platform_game::draw()
+
+3) everything is waay damn big, better shrink em
+made all moving sprites have a width of 50
+changed the platforms to have height of 100
+
+5) make the platforms wider and thinner and put them in different places
+   made a pyramid thing.  also changed set_xy in platform_array.cpp
+   to use upper left coords, not center coords
+
+6) lincoln moves funny.  maybe set dx instead of inc.   yeah. 
+   added set_dx to sprite and called it in platform_game.cpp
+
+7) esc should exit.....
+   added to platform_game.cpp
+
+
+4) cannot seem to jump    // turned off other sprites to isolate
+   - changed inc dy to set dy ... only jump when dy is 0
+   - cannot jump off of platform
+       in gravity_sprite::check_platform, if dy is positive, set it to zero
+       if it is negative (ie: jumping ), then let it be negative
+   - falls off edge bottom right
+       dunno.  
+   - cannot jump from the bottom
+       made certain that if we don't collide with platforms and at the
+       bottom, we don't accelerate
+   - does something weird at the top...
+       at the top, we now set dy to 0.   
+       and set the y coord of the top to zero
+   - jumps through platform 
+       if we hit the bottom, we move the picture off the platform
+       and set gravity in motion. 
+

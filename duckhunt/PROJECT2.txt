@@ -1,0 +1,21 @@
+This is going to be a tough project. If you are not careful, you will get screwed by it. 
+
+You are going to write the game duck hunt. 
+
+In particular.....
+
+-When the game starts, the user should see a background that looks a large grassy field beneath a blue sky. Maybe some clouds. 
+-At a random interval, perhaps 1-10 seconds, a duck should pop up from the grass and head off to the top of the screen. 
+-The duck should take a zig zagging course. 
+-The duck should have some animation. Specifally, it should be able to face right or left depending on the direction of travel. 
+-If the user clicks on the duck, it dies, and is removed from the screen. Poof. (You might want to check the sdl wiki for 
+how to handle mouse events. it is much easier than keyboard events) 
+-The game ends when the user selects q or clicks the close button. 
+
+EXTRA CREDIT: 
+-better guns! Other weapons. 
+-a dog, that occasionally pops up. 
+-death effects for the ducks. 
+-flapping wings or other animations.
+
+TURN IN: turn this in a new repository on odin. Turn in the command that I will need to check out this repository.
